@@ -1,0 +1,11 @@
+{
+  "name": "luo-eruda",
+  "version": "1.0.0",
+  "description": "This is a debugging tool for mobile phones.",
+  "main": "index.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "make 2019 by luo",
+  "license": "MIT"
+}
