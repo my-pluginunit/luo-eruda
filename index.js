@@ -8,7 +8,7 @@
       if (typeof va === "string" && window.location.host !== va) return insertScript(function () {eruda.init();});
       if ((va instanceof Array) && (va.indexOf(window.location.host) > -1)) insertScript(function () {eruda.init();});
       if ((va instanceof Object) && va.exclude) {
-        if (typeof va.exclude !== Array) throw new Error("参数类型有误！");
+        if (!(va instanceof Array)) throw new Error("参数类型有误！");
         if (va.exclude.indexOf(window.location.host) > -1) return;
         insertScript(function () {eruda.init();});
       }
