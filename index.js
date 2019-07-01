@@ -2,7 +2,7 @@
 !function (e, f) {
   typeof exports === "object" && typeof module === "object" ? module.exports = f() : typeof define === "function" && define.amd ? define([], f) : typeof exports === "object" ? exports.luoEruda = f() : e.luoEruda = f();
 }(this, function () {
-  return function (va) {
+  return function (va, vb) {
     if (va) {
       if (typeof va === "string" && window.location.host === va) return;
       if (typeof va === "string" && window.location.host !== va) return insertScript(function () {eruda.init();});
@@ -16,10 +16,14 @@
       insertScript(function () {eruda.init();});
     }
     function insertScript (callback) {
+      if (vb && (!isMobile())) return;
       var script = document.createElement("script");
       script.src = "http://cdn.jsdelivr.net/npm/eruda";
       window.document.head.appendChild(script);
       script.addEventListener("load", callback);
     }
+    function isMobile () {
+      return !!window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+    };
   }
 });

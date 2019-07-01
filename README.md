@@ -63,6 +63,24 @@ import eruda from 'luo-eruda';
 eruda({exclude: ["aaa.zzz.com", "bbb.zzz.com"]});
 ```
 
+## 额处参数
+
+```js
+- 如想只在手机里显示，禁止pc显示，则可以设置第二个参数为true
+
+import eruda from 'luo-eruda';
+
+eruda('xxx.zzz.com', true);
+
+or
+
+eruda(["xxx-dev.zzz.com", "xxx-test.zzz.com", "xxx-prod.zzz.com"], true);
+
+or
+
+eruda({exclude: ["aaa.zzz.com", "bbb.zzz.com"]}, true);
+```
+
 # License
 
 This content is released under the [MIT](http://opensource.org/licenses/MIT) License.
