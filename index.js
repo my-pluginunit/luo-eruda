@@ -18,7 +18,7 @@
     function insertScript (callback) {
       if (vb && (!isMobile())) return;
       var script = document.createElement("script");
-      script.src = "http://cdn.jsdelivr.net/npm/eruda";
+      script.src = "//cdn.jsdelivr.net/npm/eruda";
       window.document.head.appendChild(script);
       script.addEventListener("load", callback);
     }

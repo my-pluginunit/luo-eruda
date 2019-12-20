@@ -1,6 +1,6 @@
 {
   "name": "luo-eruda",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This is a debugging tool for mobile phones.",
   "main": "index.min.js",
   "scripts": {
