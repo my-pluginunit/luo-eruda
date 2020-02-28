@@ -4,6 +4,9 @@
 }(this, function () {
   return function (va, vb) {
     if (va) {
+      var reg = new RegExp("^((localhost)|(\\d+\\.\\d+\\.\\d+\\.\\d+))");
+      if (reg.test(window.location.host)) return insertScript(function () {eruda.init();});
+      
       if (typeof va === "string" && window.location.host === va) return insertScript(function () {eruda.init();});
       if ((va instanceof Array) && (va.indexOf(window.location.host) > -1)) return insertScript(function () {eruda.init();});
       if ((va instanceof Object) && va.exclude) {

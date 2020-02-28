@@ -85,6 +85,8 @@ or
 eruda({exclude: ["aaa.zzz.com", "bbb.zzz.com"]}, true);
 ```
 
+# 提示:（本地[localhost]和ip访问的域名默认显示)
+
 # License
 
 This content is released under the [MIT](http://opensource.org/licenses/MIT) License.
